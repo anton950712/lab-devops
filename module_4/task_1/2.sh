@@ -9,4 +9,4 @@ then
     path=$1
 fi
 
-echo "Amount of files in the derictory: $(find $path -type f | wc -l)"
+echo "Amount of files in the directory: $(find $path -type f | wc -l)"
