@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dataFolder=../data
+dataFolder=$(realpath ../data)
 filePath=$dataFolder/$1
 newFilePath=$dataFolder/pipeline-$(date +%m-%d-%Y).json
 

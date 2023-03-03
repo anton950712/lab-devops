@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
 distFolderName=./dist
-filePath=$0
+filePath=$(realpath $0)
 
 archiveFilePath=$distFolderName/client-app.zip
 appFolderPath=$distFolderName/app
 
-qualityCheckFilePath="${filePath/build-client/quality-check}"
-amountCheckFilePath="${filePath/lab_1\/scripts\/build-client/module_4/task_1/2}"
+qualityCheckFilePath="${filePath}/build-client/quality-check"
+amountCheckFilePath="${filePath}/lab_1/scripts/build-client/module_4/task_1/2"
+
+if ! test -f "package.json"
+then
+  echo The package.json does not exists
+  exit 1
+fi
 
 # Run build
 
