@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
 DIST_FOLDER_NAME=./dist
+
 ARCHIVE_NAME=client-app.zip
 ARCHIVE_FILE_PATH=$DIST_FOLDER_NAME/$ARCHIVE_NAME
 APP_FOLDER_PATH=$DIST_FOLDER_NAME/app
+
 CLIENT_HOST_DIR=$(pwd)/shop-react-redux-cloudfront
 CLIENT_REMOTE_DIR=/var/www
 
