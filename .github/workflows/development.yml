@@ -20,7 +20,7 @@ jobs:
         node-version: 18
   
     - name: "🔧 install npm"
-      run: npm i
+      run: npm ci --ignore-scripts
       working-directory: lab_3/shop-angular-cloudfront
       
     - name: "🔍 run linter"
