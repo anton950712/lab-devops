@@ -39,6 +39,8 @@ zip -r $archiveFilePath $appFolderPath
 
 check_remote_dir_exists $CLIENT_REMOTE_DIR
 
+# Send build
+
 echo "---> Building and transfering client files - START <---"
 echo $CLIENT_HOST_DIR
 scp -Cr $archiveFilePath VM:$CLIENT_REMOTE_DIR
