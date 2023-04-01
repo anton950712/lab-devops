@@ -1,0 +1,64 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  fe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - name: "☁️ checkout repository"
+      uses: actions/checkout@v3
+
+    - name: "🔧 setup node"
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+  
+    - name: "🔧 install npm"
+      run: npm ci --ignore-scripts
+      working-directory: lab_3/shop-angular-cloudfront
+      
+    - name: "🔍 run linter"
+      run: npm run lint:format
+      working-directory: lab_3/shop-angular-cloudfront
+
+    - name: "🔍 run tests"
+      run: npm run test
+      working-directory: lab_3/shop-angular-cloudfront
+      
+    - name: "📦 run build"
+      run: npm run build
+      working-directory: lab_3/shop-angular-cloudfront
+
+  be:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - name: "☁️ checkout repository"
+      uses: actions/checkout@v3
+
+    - name: "🔧 setup node"
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+  
+    - name: "🔧 install npm"
+      run: npm ci --ignore-scripts
+      working-directory: lab_3/nestjs-rest-api
+      
+    - name: "🔍 run linter"
+      run: npm run lint:format
+      working-directory: lab_3/nestjs-rest-api
+
+    - name: "🔍 run tests"
+      run: npm run test
+      working-directory: lab_3/nestjs-rest-api
+      
+    - name: "📦 run build"
+      run: npm run build
+      working-directory: lab_3/nestjs-rest-api
