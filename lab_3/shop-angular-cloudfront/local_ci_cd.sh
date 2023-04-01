@@ -30,7 +30,6 @@ fi
 # Run build
 
 npm i
-npm run prepare
 npm run lint
 npm run test
 npm run build
