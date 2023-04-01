@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-distFolderName=./dist
+DIST_FOLDER_NAME=./dist
 
-archiveName=client-app.zip
-archiveFilePath=$distFolderName/$archiveName
-appFolderPath=$distFolderName/app
+ARCHIVE_NAME=client-app.zip
+ARCHIVE_FILE_PATH=$DIST_FOLDER_NAME/$ARCHIVE_NAME
+APP_FOLDER_PATH=$DIST_FOLDER_NAME/app
 
 CLIENT_HOST_DIR=$(pwd)/shop-react-redux-cloudfront
 CLIENT_REMOTE_DIR=/var/www
@@ -35,7 +35,7 @@ npm run lint
 npm run test
 npm run build
 
-zip -r $archiveFilePath $appFolderPath
+zip -r $ARCHIVE_FILE_PATH $APP_FOLDER_PATH
 
 check_remote_dir_exists $CLIENT_REMOTE_DIR
 
@@ -43,7 +43,7 @@ check_remote_dir_exists $CLIENT_REMOTE_DIR
 
 echo "---> Building and transfering client files - START <---"
 echo $CLIENT_HOST_DIR
-scp -Cr $archiveFilePath VM:$CLIENT_REMOTE_DIR
-ssh VM "sudo unzip -d $CLIENT_REMOTE_DIR $CLIENT_REMOTE_DIR/$archiveName"
+scp -Cr $ARCHIVE_FILE_PATH VM:$CLIENT_REMOTE_DIR
+ssh VM "sudo unzip -d $CLIENT_REMOTE_DIR $CLIENT_REMOTE_DIR/$ARCHIVE_NAME"
 echo "---> Building and transfering - COMPLETE <---"
 
