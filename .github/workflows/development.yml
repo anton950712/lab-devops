@@ -62,9 +62,3 @@ jobs:
     - name: "📦 run build"
       run: npm run build
       working-directory: lab_3/nestjs-rest-api
-
-  codecov:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
