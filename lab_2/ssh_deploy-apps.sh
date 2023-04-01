@@ -34,5 +34,5 @@ scp -Cr $CLIENT_HOST_DIR/dist/* VM:$CLIENT_REMOTE_DIR
 echo "---> Building and transfering - COMPLETE <---"
 
 echo "---> Restarting server - START <---"
-ssh VM "sudo -S systemctl restart nginx"
+cd $SERVER_HOST_DIR && npm run start:prod
 echo "---> Restarting server - COMPLETE <---"
