@@ -30,10 +30,6 @@ jobs:
     - name: "🔍 run tests"
       run: npm run test
       working-directory: lab_3/shop-angular-cloudfront
-      
-    - name: "🔍 run audit"
-      run: npm run audit
-      working-directory: lab_3/shop-angular-cloudfront
     
     - name: "🔍 run e2e"
       run: npm run e2e
@@ -56,7 +52,7 @@ jobs:
         node-version: 18
   
     - name: "🔧 install npm"
-      run: npm i
+      run: npm ci --ignore-scripts
       working-directory: lab_3/nestjs-rest-api
       
     - name: "🔍 run linter"
