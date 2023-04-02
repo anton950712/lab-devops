@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0](https://github.com/anton950712/devops/compare/v1.0.0...v1.1.0) (2023-04-02)
+
+
+### Features
+
+* codecov test ([13755c6](https://github.com/anton950712/devops/commit/13755c608b673b0dd27e3fa0c7445abbb37e372d))
+
+
+### Bug Fixes
+
+* test ([233d2aa](https://github.com/anton950712/devops/commit/233d2aab783a5b801ee5e5582a08a5c4db2cfa8e))
+* update ([0212a62](https://github.com/anton950712/devops/commit/0212a62b494dd88bbe55ff9abe7b9f6d59320cc9))
+* update ([877487b](https://github.com/anton950712/devops/commit/877487b6f241ac23075dece088dab93f985d952d))
+* update ([3645f31](https://github.com/anton950712/devops/commit/3645f3185f591dd2af70fc9c491c3923ad89fd66))
+* update ([92e3474](https://github.com/anton950712/devops/commit/92e34743f143e6d782df11cfca54afb0e0b3139e))
+* update ([68139f7](https://github.com/anton950712/devops/commit/68139f77e22e96a7c6be8521c8f66facf373677e))
+
 ## 1.0.0 (2023-04-01)
 
 
