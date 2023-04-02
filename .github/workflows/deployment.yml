@@ -12,6 +12,9 @@ jobs:
       - name: "☁️ checkout repository"
         uses: actions/checkout@v2
       
+      - name: "📦 run install"
+        run: npm i
+      
       - name: "📦 run build"
         run: npm run build
         working-directory: lab_3/shop-angular-cloudfront
