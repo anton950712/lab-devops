@@ -18,4 +18,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "anton950712"
           heroku_email: ${{secrets.HEROKU_APP_EMAIL}}
-          appdir: lab_3/shop-angular-cloudfront/dist
+          appdir: lab_3/shop-angular-cloudfront
