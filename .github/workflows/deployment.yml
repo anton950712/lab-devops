@@ -9,7 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: "☁️ checkout repository"
       - uses: actions/checkout@v2
+      
+      - name: "📦 run build"
+        run: npm run build
+        working-directory: lab_3/shop-angular-cloudfront
+        
+      - name: "☁️ deploy"
       - uses: akhileshns/heroku-deploy@v3.12.13
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
