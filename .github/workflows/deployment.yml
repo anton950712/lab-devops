@@ -11,14 +11,6 @@ jobs:
     steps:
       - name: "☁️ checkout repository"
         uses: actions/checkout@v3
-      
-      - name: "🔧 install npm"
-        run: npm ci --ignore-scripts
-        working-directory: lab_3/shop-angular-cloudfront
-      
-      - name: "📦 run build"
-        run: npm run build
-        working-directory: lab_3/shop-angular-cloudfront
         
       - name: "☁️ deploy"
         uses: akhileshns/heroku-deploy@v3.12.13
