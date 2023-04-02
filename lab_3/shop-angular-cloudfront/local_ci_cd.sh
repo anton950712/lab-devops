@@ -32,13 +32,24 @@ fi
 npm i
 npm run lint
 npm run test
+npm run e2e
 npm run build
+
+# Create archive
+
+if [ -e "$archiveFilePath" ]
+then
+  rm "$archiveFilePath"
+  echo Archive was removed
+fi
 
 zip -r $ARCHIVE_FILE_PATH $APP_FOLDER_PATH
 
-check_remote_dir_exists $CLIENT_REMOTE_DIR
+echo Archive was created
 
 # Send build
+
+check_remote_dir_exists $CLIENT_REMOTE_DIR
 
 echo "---> Building and transfering client files - START <---"
 echo $CLIENT_HOST_DIR
