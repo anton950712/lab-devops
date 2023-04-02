@@ -14,6 +14,7 @@ jobs:
       
       - name: "📦 run install"
         run: npm i
+        working-directory: lab_3/shop-angular-cloudfront
       
       - name: "📦 run build"
         run: npm run build
